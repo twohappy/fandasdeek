@@ -1,26 +1,22 @@
 import {
+  Column,
+  CreateDateColumn,
   Entity,
   PrimaryGeneratedColumn,
-  Column,
-  BaseEntity,
-  CreateDateColumn,
   UpdateDateColumn
 } from "typeorm";
 
-@Entity({ name: "users" })
-export class User extends BaseEntity {
+@Entity({ name: "fragments" })
+export class Fragment {
 
   @PrimaryGeneratedColumn()
   id: number;
 
   @Column()
-  firstName: string;
+  name: string;
 
   @Column()
-  lastName: string;
-
-  @Column()
-  age: number;
+  content: string;
 
   @CreateDateColumn()
   created_at: Date;
