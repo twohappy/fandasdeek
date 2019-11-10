@@ -4,6 +4,7 @@ import {TranslateService} from '@ngx-translate/core';
 import {environment} from '../environments/environment';
 import {DatabaseService} from './data-access/database.service';
 import {User} from './data-access/entities/user.entity';
+import {Point} from './data-access/entities/point.entity';
 const sql = require('sqlite3');
 @Component({
   selector: 'app-root',
@@ -48,15 +49,22 @@ export class AppComponent {
   addUser() {
     const user = new User();
 
-    user.FirstName = 'firstName';
-    user.LastName = 'lastName';
-    user.Age = 90;
+    user.firstName = 'firstName';
+    user.lastName = 'lastName';
+    user.age = 90;
 
     this.databaseService
       .connection
       .then(() => user.save())
       .then(() => {
         this.getUsers();
+      });
+
+    this.databaseService
+      .connection
+      .then(() => Point.find({ relations: ["categories", "fragments"] }))
+      .then(points => {
+        console.log(points);
       });
   }
 
