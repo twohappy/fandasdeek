@@ -2,7 +2,9 @@ import { getRepository, MigrationInterface, QueryRunner } from "typeorm";
 import { Category } from "../entities/category.entity";
 import { Fragment } from "../entities/fragment.entity";
 import { Point } from "../entities/point.entity";
-
+/*
+ * thx to : https://medium.com/@bansalsushil_34403/how-to-seed-typeorm-d9637a5948cc
+ */
 const now = new Date();
 const CategorySeed: Partial<Category>[] = [
   {
