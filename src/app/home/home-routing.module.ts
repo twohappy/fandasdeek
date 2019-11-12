@@ -5,14 +5,14 @@ import { HomeComponent } from "./home.component";
 import { NoteFormComponent } from "./note-form/note-form.component";
 
 const routes: Routes = [
-  // {
-  //   path: 'home',
-  //   component: HomeComponent
-  // },
   {
     path: "home",
-    component: NoteFormComponent
+    component: HomeComponent
   }
+  // {
+  //   path: "home",
+  //   component: NoteFormComponent
+  // }
 ];
 
 @NgModule({

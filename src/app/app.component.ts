@@ -5,6 +5,9 @@ import {environment} from '../environments/environment';
 import {DatabaseService} from './data-access/database.service';
 import {User} from './data-access/entities/user.entity';
 import {Point} from './data-access/entities/point.entity';
+import {Observable} from 'rxjs';
+import {BreakpointObserver, Breakpoints} from '@angular/cdk/layout';
+import {map, shareReplay} from 'rxjs/operators';
 const sql = require('sqlite3');
 @Component({
   selector: 'app-root',
@@ -13,11 +16,17 @@ const sql = require('sqlite3');
 })
 export class AppComponent {
   users: User[] = [];
+  isHandset$: Observable<boolean> = this.breakpointObserver.observe(Breakpoints.Handset)
+    .pipe(
+      map(result => result.matches),
+      shareReplay()
+    );
 
   constructor(
     public electronService: ElectronService,
     private translate: TranslateService,
-    private databaseService: DatabaseService
+    private databaseService: DatabaseService,
+    private breakpointObserver: BreakpointObserver
   ) {
     translate.setDefaultLang('en');
     console.log('AppConfig', environment);

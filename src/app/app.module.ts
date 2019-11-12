@@ -19,6 +19,8 @@ import { HomeModule } from "./home/home.module";
 import { AppComponent } from "./app.component";
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 import { MatSidenavModule } from "@angular/material/sidenav";
+import {LayoutModule} from '@angular/cdk/layout';
+import {MatIconModule, MatListModule, MatToolbarModule} from '@angular/material';
 
 // AoT requires an exported function for factories
 export function HttpLoaderFactory(http: HttpClient) {
@@ -32,6 +34,11 @@ export function HttpLoaderFactory(http: HttpClient) {
     FormsModule,
     HttpClientModule,
     CoreModule,
+    LayoutModule,
+    MatToolbarModule,
+    MatSidenavModule,
+    MatIconModule,
+    MatListModule,
     SharedModule,
     HomeModule,
     AppRoutingModule,

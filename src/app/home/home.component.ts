@@ -1,15 +1,25 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from "@angular/core";
+import * as ClassicEditor from "@ckeditor/ckeditor5-build-classic";
+import { CKEditorComponent } from "@ckeditor/ckeditor5-angular";
+import "@ckeditor/ckeditor5-build-classic/build/translations/zh-cn";
 
 @Component({
-  selector: 'app-home',
-  templateUrl: './home.component.html',
-  styleUrls: ['./home.component.scss']
+  selector: "app-home",
+  templateUrl: "./home.component.html",
+  styleUrls: ["./home.component.scss"]
 })
 export class HomeComponent implements OnInit {
+  @ViewChild("editor", { static: false }) editorComponent: CKEditorComponent;
 
-  constructor() { }
+  public Editor = ClassicEditor;
+  public config = {
+    language: "zh-cn"
+  };
+  public model = {
+    editorData: "<p>Hello, world!</p>"
+  };
 
-  ngOnInit() {
-  }
+  constructor() {}
 
+  ngOnInit() {}
 }

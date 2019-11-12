@@ -12,7 +12,8 @@ import { MatButtonModule } from "@angular/material/button";
 import { MatSelectModule } from "@angular/material/select";
 import { MatRadioModule } from "@angular/material/radio";
 import { MatCardModule } from "@angular/material/card";
-import { ReactiveFormsModule } from "@angular/forms";
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
+import {CKEditorModule} from '@ckeditor/ckeditor5-angular';
 
 @NgModule({
   declarations: [HomeComponent, NoteFormComponent],
@@ -27,7 +28,9 @@ import { ReactiveFormsModule } from "@angular/forms";
     MatSelectModule,
     MatRadioModule,
     MatCardModule,
-    ReactiveFormsModule
+    FormsModule,
+    ReactiveFormsModule,
+    CKEditorModule,
   ]
 })
 export class HomeModule {}
