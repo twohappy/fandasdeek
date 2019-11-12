@@ -12,10 +12,12 @@ import { MatButtonModule } from "@angular/material/button";
 import { MatSelectModule } from "@angular/material/select";
 import { MatRadioModule } from "@angular/material/radio";
 import { MatCardModule } from "@angular/material/card";
-import { ReactiveFormsModule } from "@angular/forms";
+import { FormsModule, ReactiveFormsModule } from "@angular/forms";
+import { MarkdownModule } from "ngx-markdown";
+import { PointFormComponent } from "./point-form/point-form.component";
 
 @NgModule({
-  declarations: [HomeComponent, NoteFormComponent],
+  declarations: [HomeComponent, NoteFormComponent, PointFormComponent],
   imports: [
     CommonModule,
     SharedModule,
@@ -27,7 +29,9 @@ import { ReactiveFormsModule } from "@angular/forms";
     MatSelectModule,
     MatRadioModule,
     MatCardModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    MarkdownModule,
+    FormsModule
   ]
 })
 export class HomeModule {}

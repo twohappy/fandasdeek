@@ -1,7 +1,6 @@
-<!--<div class="container">-->
-<!--  <h1 class="title">-->
-<!--    {{ 'PAGES.HOME.TITLE' | translate }}-->
-<!--  </h1>-->
-<!--</div>-->
+<div style="display: flex;flex-direction: row;min-height: 500px">
+  <textarea style="flex:1" name="" id="" cols="30" rows="10" [(ngModel)]="markdown"></textarea>
+  <markdown style="flex:1" [data]="markdown"></markdown>
+</div>
 
-  <mat-slider min="1" max="100" step="1" value="1"></mat-slider>
+<p>{{ markdown }}</p>

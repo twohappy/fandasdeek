@@ -7,15 +7,15 @@ import { MatInputModule } from "@angular/material/input";
 import { MatRadioModule } from "@angular/material/radio";
 import { MatSelectModule } from "@angular/material/select";
 
-import { NoteFormComponent } from "./note-form.component";
+import { PointFormComponent } from "./point-form.component";
 
-describe("NoteFormComponent", () => {
-  let component: NoteFormComponent;
-  let fixture: ComponentFixture<NoteFormComponent>;
+describe("PointFormComponent", () => {
+  let component: PointFormComponent;
+  let fixture: ComponentFixture<PointFormComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [NoteFormComponent],
+      declarations: [PointFormComponent],
       imports: [
         NoopAnimationsModule,
         ReactiveFormsModule,
@@ -29,7 +29,7 @@ describe("NoteFormComponent", () => {
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(NoteFormComponent);
+    fixture = TestBed.createComponent(PointFormComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
