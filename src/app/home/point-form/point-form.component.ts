@@ -18,6 +18,10 @@ export class PointFormComponent implements OnInit {
     content: null
   });
 
+  editorOptions = {
+    showPreviewPanel: false
+  };
+
   get valuuu() {
     return JSON.stringify(this.pointForm.value, null, 2);
   }

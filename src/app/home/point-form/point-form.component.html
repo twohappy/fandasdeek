@@ -13,22 +13,23 @@
       </div>
       <div class="row" style="min-height: 500px">
         <div class="col">
-<!--          <mat-form-field class="full-width full-height">-->
-            <md-editor name="Content"
-                       [upload]="doUpload"
-                       formControlName="content"
-                       [height]="'6q00px'"
-                       [mode]="'editor'"
-                       required
-                       maxlength="500">
-            </md-editor>
-<!--          </mat-form-field>-->
+          <md-editor
+            name="Content"
+            [upload]="doUpload"
+            formControlName="content"
+            [height]="'600px'"
+            [mode]="'editor'"
+            required
+            [options]="editorOptions"
+            maxlength="500"
+          >
+          </md-editor>
         </div>
-<!--        <div class="col">-->
-<!--          <mat-card class="full-width full-height">-->
-<!--            <markdown style="flex:1" [data]="pointForm.value.content"></markdown>-->
-<!--          </mat-card>-->
-<!--        </div>-->
+        <div class="col">
+          <mat-card class="full-width full-height">
+            <markdown style="flex:1" [data]="pointForm.value.content"></markdown>
+          </mat-card>
+        </div>
       </div>
     </mat-card-content>
     <mat-card-actions>
