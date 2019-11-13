@@ -15,6 +15,7 @@ import { MatCardModule } from "@angular/material/card";
 import { FormsModule, ReactiveFormsModule } from "@angular/forms";
 import { MarkdownModule } from "ngx-markdown";
 import { PointFormComponent } from "./point-form/point-form.component";
+import {LMarkdownEditorModule} from 'ngx-markdown-editor';
 
 @NgModule({
   declarations: [HomeComponent, NoteFormComponent, PointFormComponent],
@@ -31,7 +32,8 @@ import { PointFormComponent } from "./point-form/point-form.component";
     MatCardModule,
     ReactiveFormsModule,
     MarkdownModule,
-    FormsModule
+    FormsModule,
+    LMarkdownEditorModule
   ]
 })
 export class HomeModule {}

@@ -1,5 +1,4 @@
 <form [formGroup]="pointForm" novalidate (ngSubmit)="onSubmit()">
-  666
   <mat-card class="shipping-card">
     <mat-card-header>
       <mat-card-title>记一个点</mat-card-title>
@@ -14,15 +13,22 @@
       </div>
       <div class="row" style="min-height: 500px">
         <div class="col">
-          <mat-form-field class="full-width full-height">
-            <textarea matInput style="flex:1" name="" id="" cols="30" rows="10" formControlName="content"></textarea>
-          </mat-form-field>
+<!--          <mat-form-field class="full-width full-height">-->
+            <md-editor name="Content"
+                       [upload]="doUpload"
+                       formControlName="content"
+                       [height]="'6q00px'"
+                       [mode]="'editor'"
+                       required
+                       maxlength="500">
+            </md-editor>
+<!--          </mat-form-field>-->
         </div>
-        <div class="col">
-          <mat-card class="full-width full-height">
-            <markdown style="flex:1" [data]="pointForm.value.content"></markdown>
-          </mat-card>
-        </div>
+<!--        <div class="col">-->
+<!--          <mat-card class="full-width full-height">-->
+<!--            <markdown style="flex:1" [data]="pointForm.value.content"></markdown>-->
+<!--          </mat-card>-->
+<!--        </div>-->
       </div>
     </mat-card-content>
     <mat-card-actions>
