@@ -13,7 +13,7 @@ import { MatSelectModule } from "@angular/material/select";
 import { MatRadioModule } from "@angular/material/radio";
 import { MatCardModule } from "@angular/material/card";
 import { ReactiveFormsModule } from "@angular/forms";
-
+import { FormsModule } from '@angular/forms';
 @NgModule({
   declarations: [HomeComponent, NoteFormComponent],
   imports: [
@@ -27,7 +27,8 @@ import { ReactiveFormsModule } from "@angular/forms";
     MatSelectModule,
     MatRadioModule,
     MatCardModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    FormsModule
   ]
 })
 export class HomeModule {}
